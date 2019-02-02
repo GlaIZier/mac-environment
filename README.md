@@ -6,3 +6,4 @@ Ansible work environment initializer for *nix environments
 3. download chrome, idea, sublime, skype, terminator
 4. git and git settings?
 5. generate .ssh keys for github
+6. install python and additional python dependencies
