@@ -1,4 +1,5 @@
-# work-environment-initializer
+# Ansible mac environment initializer for developers
+// Fixme
 Ansible work environment initializer for *nix environments
 
 1. add .bash_aliases, ... (add links from home to this repo)
