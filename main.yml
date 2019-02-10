@@ -3,3 +3,6 @@
 
   vars_files:
     - config.yml
+
+  tasks:
+    - include_tasks: tasks/ansible-check.yml
