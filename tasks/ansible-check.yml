@@ -1,10 +1,10 @@
 ---
-- name: Ensure downloads directory exists.
+- name: Check downloads directory exists.
   file:
     path: "{{ downloads }}"
     state: directory
 
-- name: Ensure /etc/ansible directory exists.
+- name: Check /etc/ansible directory exists.
   file:
     path: /etc/ansible
     state: directory

@@ -6,3 +6,6 @@
 
   tasks:
     - include_tasks: tasks/ansible-check.yml
+
+    - include_tasks: tasks/configs.yml
+      tags: ['configs']

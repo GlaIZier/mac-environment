@@ -1,0 +1,9 @@
+---
+- name: Copy configs to a home directory
+  copy:
+    src: "{{ item }}"
+    dest: ~/
+    force: no
+    mode: 655
+  with_fileglob:
+    - files/configs/*
