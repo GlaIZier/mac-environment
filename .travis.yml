@@ -31,3 +31,11 @@ script:
 
   # Test the playbook.
   - "travis_wait 30 ansible-playbook main.yml"
+
+  - "ls -lah ~"
+
+  - "cat ~/.bash_profile"
+
+  - "cat ~/.profile"
+
+  - "cat ~/.bashrc"
