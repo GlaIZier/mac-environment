@@ -1,4 +1,5 @@
 # Ansible mac environment initializer for developers
+[![Build Status](https://travis-ci.org/GlaIZier/mac-dev-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/mac-dev-environment)
 // Fixme.
 // todo test
 Ansible work environment initializer for a MacOs environment

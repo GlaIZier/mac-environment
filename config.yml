@@ -1,3 +1,4 @@
 ---
 
-downloads: ~/.tmp/ansible-downloads/
+downloads: "~/.tmp/ansible-downloads/"
+home: "~"

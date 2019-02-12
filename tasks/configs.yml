@@ -1,9 +1,9 @@
 ---
-- name: Copy configs to a home directory
-  copy:
+- name: Ensure that configs are in the home directory
+  file:
     src: "{{ item }}"
-    dest: ~/
+    dest: "{{ home }}"
     force: no
-    mode: 655
+    state: link
   with_fileglob:
     - files/configs/*
