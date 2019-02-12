@@ -6,4 +6,4 @@
     force: yes
     state: link
   with_fileglob:
-    - files/configs/*
+    - files/configs/.*
