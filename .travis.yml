@@ -36,12 +36,5 @@ script:
   # Test the playbook.
   - "travis_wait 30 ansible-playbook main.yml"
 
-  - "ls -lah ~"
-
-  - "cat ~/.bash_profile"
-
-  - "cat ~/.profile"
-
-  - "cat ~/.bashrc"
-
-  - ([ -f ~/.profile ] && [ -f ~/.bashrc ] && [ -f ~/.bash_profile ]) && exit 0 || exit 1
+  # Check configs (as links) exist
+  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ]) && exit 1 || exit 0
