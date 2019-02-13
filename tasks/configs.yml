@@ -2,7 +2,7 @@
 - name: Ensure that configs are in the home directory
   file:
     src: "{{ item }}"
-    dest: "{{ home }}/{{ item }}"
+    dest: "{{ home }}/{{ item | basename}}"
     force: no
     state: link
   with_fileglob:

@@ -43,3 +43,5 @@ script:
   - "cat ~/.profile"
 
   - "cat ~/.bashrc"
+
+  - ([ -f ~/.profile ] && [ -f ~/.bashrc ] && [ -f ~/.bash_profile ]) && exit 0 || exit 1
