@@ -12,6 +12,10 @@ before_install:
   - sudo rm -rf /usr/local/Homebrew
   - sudo rm -rf /usr/local/Caskroom
   - sudo rm -rf /usr/local/bin/brew
+  - sudo rm -rf ~/.profile
+  - sudo rm -rf ~/.bash_profile
+  - sudo rm -rf ~/.bashrc
+
 install:
   # Install pip.
   - sudo easy_install pip
