@@ -30,6 +30,9 @@ install:
 
 script:
 
+  # Install dependencies.
+  - "ansible-galaxy install -r requirements.yml"
+
   # Check the role/playbook's syntax.
   - "ansible-playbook main.yml --syntax-check"
 
@@ -37,5 +40,4 @@ script:
   - "travis_wait 30 ansible-playbook main.yml"
 
   # Check configs (as links) exist
-  # Fixme
-  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ]) && { echo 'Configs are not in the home directory'; exit 1;} || { echo 'Configs are in the home directory'; exit 0;}
+  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}

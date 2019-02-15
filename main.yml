@@ -2,7 +2,18 @@
 - hosts: localhost
 
   vars_files:
-    - config.yml
+    - default.config.yml
+
+  # update the default.config.yml variables with ones from config.yml if it exists
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
+
+  roles:
+    - role: geerlingguy.homebrew
+      tags: ['homebrew']
 
   tasks:
     - include_tasks: tasks/ansible-check.yml
