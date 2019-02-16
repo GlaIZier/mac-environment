@@ -2,3 +2,9 @@
 
 downloads: "~/.tmp/ansible-downloads/"
 home: "~"
+
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""

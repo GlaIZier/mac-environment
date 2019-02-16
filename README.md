@@ -2,10 +2,12 @@
 [![Build Status](https://travis-ci.org/GlaIZier/mac-dev-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/mac-dev-environment)
 // Fixme.
 // todo test
+// todo add casc and brew applications to default settings
+// todo create a separate repo for profiles and configs and import it here?
 Ansible work environment initializer for a MacOs environment
 
 1. add .bash_aliases, ... (add links from home to this repo) (config.yml)
-2. install homebrew, homebrew cask ()
+2. install homebrew, homebrew cask (), mas
 2. install sdkman, java, maven, gradle
 3. download chrome, idea, sublime, skype, google drive, docker, iTerm2
 4. git and git settings (git config, gitignore)?
@@ -56,3 +58,8 @@ You can override any of the defaults configured in `default.config.yml` by creat
 Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables.
 
 ## Inspired by [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) 
+### Used roles
+```
+https://github.com/geerlingguy/ansible-role-homebrew
+https://github.com/geerlingguy/ansible-role-mas
+```
