@@ -11,13 +11,15 @@ homebrew_installed_packages:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - docker
-  - firefox
   - google-chrome
+  - google-backup-and-sync
+  - firefox
   - sublime-text
   - skype
   - iterm2
   - intellij-idea
+  - docker
+
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
