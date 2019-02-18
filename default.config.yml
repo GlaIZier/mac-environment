@@ -5,9 +5,9 @@ home: "~"
 
 # see the sdkman role https://github.com/Comcast/ansible-sdkman
 sdkman_install_packages:
-        - { candidate: java, version: '' }
-        - { candidate: gradle, version: '' }
-        - { candidate: maven, version: ''}
+        - { candidate: java, version: '11.0.2-open' }
+        - { candidate: gradle, version: '5.2.1' }
+        - { candidate: maven, version: '3.6.0'}
 
 #see the homebrew role https://github.com/geerlingguy/ansible-role-homebrew
 homebrew_installed_packages:
