@@ -12,8 +12,6 @@
       tags: ['always']
 
   roles:
-    - role: comcast.sdkman
-      tags: ['sdkman']
     # https://github.com/geerlingguy/ansible-role-homebrew
     - role: geerlingguy.homebrew
       tags: ['homebrew']
@@ -21,6 +19,8 @@
     - role: geerlingguy.mas
       when: mas_installed_apps
       tags: ['mas']
+    - role: comcast.sdkman
+      tags: ['sdkman']
 
 
 

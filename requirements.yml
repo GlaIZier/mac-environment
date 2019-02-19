@@ -1,4 +1,4 @@
 ---
-- name: comcast.sdkman
 - name: geerlingguy.homebrew
 - name: geerlingguy.mas
+- name: comcast.sdkman
