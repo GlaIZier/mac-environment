@@ -28,7 +28,7 @@ homebrew_cask_apps:
   - docker
 
 
-# See `geerlingguy.mas` role documentation for usage instructions.
+# See the role https://github.com/geerlingguy/ansible-role-mas
 mas_installed_apps: []
 mas_email: ""
 mas_password: ""
