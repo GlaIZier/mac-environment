@@ -37,7 +37,7 @@ script:
   - "ansible-playbook main.yml --syntax-check"
 
   # Test the playbook.
-  - "travis_wait 30 ansible-playbook main.yml -vvv"
+  - "travis_wait 30 ansible-playbook main.yml"
 
   # Check configs (as links) exist
   - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}
