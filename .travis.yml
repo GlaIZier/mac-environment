@@ -36,8 +36,10 @@ script:
   # Check the role/playbook's syntax.
   - "ansible-playbook main.yml --syntax-check"
 
+  - "ansible -m setup hostname"
+
   # Copy test config.yml to the root directory
-  - "cp tests/config.yml config.yml"
+  - "cp test/config.yml config.yml"
 
   # Test the playbook.
   - "travis_wait 30 ansible-playbook main.yml"
