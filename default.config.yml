@@ -20,7 +20,6 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - google-chrome
   - google-backup-and-sync
-  - firefox
   - sublime-text
   - skype
   - iterm2

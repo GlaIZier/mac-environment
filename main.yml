@@ -6,6 +6,9 @@
 
   # update the default.config.yml variables with ones from config.yml if it exists
   pre_tasks:
+
+    - debug: msg="{{ ansible_pkg_mgr }}"
+
     - include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
