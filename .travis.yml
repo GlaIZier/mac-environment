@@ -36,7 +36,7 @@ script:
   # Check the role/playbook's syntax.
   - "ansible-playbook main.yml --syntax-check"
 
-  - "ansible -m setup hostname"
+  - "ansible -m setup localhost"
 
   # Copy test config.yml to the root directory
   - "cp test/config.yml config.yml"
