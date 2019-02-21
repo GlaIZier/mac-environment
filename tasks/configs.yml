@@ -3,9 +3,7 @@
   file:
     src: "{{ item }}"
     dest: "{{ home }}/{{ item | basename}}"
-    force: yes
+    force: no
     state: link
   with_fileglob:
     - files/configs/.*
-
-- debug: msg="{{ ansible_pkg_mgr }}"
