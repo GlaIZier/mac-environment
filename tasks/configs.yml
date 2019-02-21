@@ -3,7 +3,7 @@
   file:
     src: "{{ item }}"
     dest: "{{ home }}/{{ item | basename}}"
-    force: no
+    force: yes
     state: link
   with_fileglob:
     - files/configs/.*
