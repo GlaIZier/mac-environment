@@ -7,14 +7,15 @@ Ansible work environment initializer for a MacOs environment
 
 1. // add .bash_aliases, ... (add links from home to this repo) (config.yml)
 2. // install homebrew, homebrew cask (), mas
-2. install sdkman, java, maven, gradle
+2. // install sdkman, java, maven, gradle
 3. // download chrome, idea, sublime, skype, google-backup-and-sync, docker, iTerm2, telegram?
-4. git and git settings (git config, gitignore)?
-5. generate .ssh keys for github?
-6. install python and additional python dependencies
+4. // git and git settings (git config, gitignore)?
+5. // generate .ssh keys for github?
+6. // install python and additional python dependencies
 8. // add an overridable config
-9. install extra_packages?
+9. // install extra_packages
 10. install zsh .zshrc?
+11. add config for ssh
 
 ## Installation
 
@@ -64,3 +65,8 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 https://github.com/geerlingguy/ansible-role-homebrew
 https://github.com/geerlingguy/ansible-role-mas
 ```
+
+## Problems
+https://stackoverflow.com/questions/29305335/how-can-i-persist-an-ansible-variable-across-ansible-roles
+https://everythingshouldbevirtual.com/automation/ansible-using-set_facts-module/
+https://stackoverflow.com/questions/30763709/ansible-playbook-execute-in-this-order-task-role-task-role-task

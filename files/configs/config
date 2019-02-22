@@ -1,0 +1,11 @@
+# github GlaIZier
+host github.com
+ HostName github.com
+ IdentityFile /home/GlaIZier/.ssh/github_rsa
+ User git
+
+# github q0oz
+Host q0oz.github.com    
+   HostName github.com
+   User git
+   IdentityFile /home/GlaIZier/.ssh/git_rsa

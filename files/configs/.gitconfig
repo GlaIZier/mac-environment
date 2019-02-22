@@ -1,0 +1,6 @@
+[user]
+	name = GlaIZier
+	email = kh.mv@bk.ru
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore

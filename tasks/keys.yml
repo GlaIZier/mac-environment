@@ -1,0 +1,10 @@
+---
+- name: Ensures {{ home }}/.ssh/ directory exists
+  file:
+    path: "{{ home }}/.ssh"
+    state: directory
+
+- name: Ensure that ssh rsa key is in the {{ home }}/.ssh/
+  command : "ssh-keygen -q -t rsa -b 4096 -f {{ home }}/.ssh/key -C 'GlaIZier' -N ''"
+  args:
+    creates: "{{ home }}/.ssh/key"
