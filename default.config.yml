@@ -16,6 +16,7 @@ homebrew_installed_packages:
   - openssl
   - wget
   - python
+  - zsh
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:

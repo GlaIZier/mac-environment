@@ -2,7 +2,6 @@
 [![Build Status](https://travis-ci.org/GlaIZier/mac-dev-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/mac-dev-environment)
 // Fixme.
 // todo test
-// todo create a separate repo for profiles and configs and import it here?
 Ansible work environment initializer for a MacOs environment
 
 1. // add .bash_aliases, ... (add links from home to this repo) (config.yml)
@@ -15,7 +14,13 @@ Ansible work environment initializer for a MacOs environment
 8. // add an overridable config
 9. // install extra_packages
 10. install zsh .zshrc?
+https://github.com/fourforbusiness/ansible-role-oh-my-zsh/blob/master/templates/zshrc.j2
+https://github.com/veggiemonk/ansible-ohmyzsh
+https://github.com/viasite-ansible/ansible-role-zsh
 11. add config for ssh
+12. add the sdk_man variable to zsh profiles
+13. create a separate repo for configs and dotfiles
+https://github.com/geerlingguy/ansible-role-dotfiles/blob/master/tasks/main.yml
 
 ## Installation
 
