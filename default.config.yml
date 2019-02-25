@@ -1,13 +1,21 @@
 ---
 
 downloads: "~/.tmp/ansible-downloads/"
-home: "~"
 
-# see the sdkman role https://github.com/Comcast/ansible-sdkman
-sdkman_install_packages:
-        - { candidate: java, version: '' }
-        - { candidate: gradle, version: '' }
-        - { candidate: maven, version: '' }
+
+configure_dotfiles: yes
+configure_sdkman: yes
+
+dotfiles_repo: "https://github.com/GlaIZier/configs"
+dotfiles_repo_version: master
+dotfiles_repo_local_destination: "~/.tmp/configs"
+dotfiles_files:
+  - macos/.bash_profile
+  - macos/.bashrc
+  - macos/.profile
+  - macos/.zprofile
+  - general/.gitignore
+  - general/.gitconfig
 
 #see the homebrew role https://github.com/geerlingguy/ansible-role-homebrew
 homebrew_installed_packages:
@@ -33,6 +41,12 @@ homebrew_cask_apps:
 mas_installed_apps: []
 mas_email: ""
 mas_password: ""
+
+# see the sdkman role https://github.com/Comcast/ansible-sdkman
+sdkman_install_packages:
+        - { candidate: java, version: '' }
+        - { candidate: gradle, version: '' }
+        - { candidate: maven, version: '' }
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are

@@ -18,12 +18,17 @@
     # https://github.com/geerlingguy/ansible-role-homebrew
     - role: geerlingguy.homebrew
       tags: ['homebrew']
+    # https://github.com/geerlingguy/ansible-role-dotfiles
+    - role: geerlingguy.dotfiles
+      when: configure_dotfiles
+      tags: ['dotfiles']
     # https://github.com/geerlingguy/ansible-role-mas
     - role: geerlingguy.mas
       when: mas_installed_apps
       tags: ['mas']
     # https://github.com/Comcast/ansible-sdkman
     - role: comcast.sdkman
+      when: configure_sdkman
       tags: ['sdkman']
 
 
@@ -31,8 +36,8 @@
   tasks:
     - include_tasks: tasks/ansible-check.yml
 
-    - include_tasks: tasks/configs.yml
-      tags: ['configs']
+#    - include_tasks: tasks/configs.yml
+#      tags: ['configs']
 
     - include_tasks: tasks/keys.yml
       tags: ['keys']
