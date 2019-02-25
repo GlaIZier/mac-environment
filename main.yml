@@ -4,11 +4,10 @@
   vars_files:
     - default.config.yml
 
-  # update the default.config.yml variables with ones from config.yml if it exists
   pre_tasks:
+#    - debug: msg="{{ ansible_pkg_mgr }}"
 
-    - debug: msg="{{ ansible_pkg_mgr }}"
-
+    # update the default.config.yml variables with ones from config.yml if it exists
     - include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
@@ -17,11 +16,8 @@
   roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
     - role: geerlingguy.homebrew
+      when: configure_homebrew
       tags: ['homebrew']
-#    # https://github.com/geerlingguy/ansible-role-dotfiles
-#    - role: geerlingguy.dotfiles
-#      when: configure_dotfiles
-#      tags: ['dotfiles']
     # https://github.com/geerlingguy/ansible-role-mas
     - role: geerlingguy.mas
       when: mas_installed_apps
@@ -30,6 +26,10 @@
     - role: comcast.sdkman
       when: configure_sdkman
       tags: ['sdkman']
+    # https://github.com/viasite-ansible/ansible-role-zsh
+    - role: viasite-ansible.zsh
+      when: configure_zsh
+      tags: ['zsh']
 
 
 
@@ -40,8 +40,13 @@
       when: configure_dotfiles
       tags: ['dotfiles']
 
-    - include_tasks: tasks/keys.yml
-      tags: ['keys']
+    - include_tasks: tasks/ssh.yml
+      when: configure_ssh
+      tags: ['ssh']
+
+    - include_tasks: tasks/zsh.yml
+      when: (configure_zsh && configure_dotfiles)
+      tags: ['zsh', 'dotfiles']
 
     - include_tasks: tasks/extra-packages.yml
       tags: ['extra-packages']

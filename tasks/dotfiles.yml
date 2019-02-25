@@ -1,4 +1,5 @@
 ---
+# Inspired by https://github.com/geerlingguy/ansible-role-dotfiles/blob/master/tasks/main.yml
 - name: Ensure dotfiles repository is cloned locally.
   git:
     repo: "{{ dotfiles_repo }}"

@@ -18,10 +18,8 @@ https://github.com/fourforbusiness/ansible-role-oh-my-zsh/blob/master/templates/
 https://github.com/veggiemonk/ansible-ohmyzsh
 https://github.com/viasite-ansible/ansible-role-zsh
 11. add config for ssh
-12. add the sdk_man variable to zsh profiles
-13. create a separate repo for configs and dotfiles
-https://github.com/geerlingguy/ansible-role-dotfiles/blob/master/tasks/main.yml
-
+13. // create a separate repo for configs and dotfiles
+12. add the sdk_man variable to zsh and bash profiles?
 ## Installation
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
@@ -75,3 +73,6 @@ https://github.com/geerlingguy/ansible-role-mas
 https://stackoverflow.com/questions/29305335/how-can-i-persist-an-ansible-variable-across-ansible-roles
 https://everythingshouldbevirtual.com/automation/ansible-using-set_facts-module/
 https://stackoverflow.com/questions/30763709/ansible-playbook-execute-in-this-order-task-role-task-role-task
+
+## Problems 
+Describe a problem with sdkman role and {{ ansible_pkg_mgr }} 
