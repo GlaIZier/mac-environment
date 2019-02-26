@@ -5,14 +5,22 @@
     - default.config.yml
 
   pre_tasks:
-#    - debug: msg="{{ ansible_pkg_mgr }}"
+    - debug: msg="{{ ansible_pkg_mgr }}"
 
-    -
+    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
+      set_fact:
+        ansible_pkg_mgr: "homebrew"
+#      when:
+
+    - debug: msg="{{ ansible_pkg_mgr }}"
+
     # update the default.config.yml variables with ones from config.yml if it exists
     - include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
+
+    - debug: msg="{{ ansible_pkg_mgr }}"
 
   roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
@@ -31,10 +39,10 @@
     - role: viasite-ansible.zsh
       when: configure_zsh
       tags: ['zsh']
-#      put it in pre_tasks for set_fact?
-      vars:
-        ansible_pkg_mgr: "homebrew"
-        when: ansible_facts['ansible_pkg_mgr'] == "unknown"
+##      put it in pre_tasks for set_fact?
+#      vars:
+#        ansible_pkg_mgr: "homebrew"
+#        when: ansible_facts['ansible_pkg_mgr'] == "unknown"
 
 
 
