@@ -5,7 +5,7 @@
     - default.config.yml
 
   pre_tasks:
-    - debug: msg="{{ ansible_pkg_mgr }}"
+    - debug: msg="{{ ansible_facts.pkg_mgr }}"
     - name: Display all variables/facts known for a host
       debug:
         var: hostvars[inventory_hostname]
@@ -17,7 +17,7 @@
               pkg_mgr: homebrew
 #      when:
 
-    - debug: msg="{{ ansible_pkg_mgr }}"
+    - debug: msg="{{ ansible_facts.pkg_mgr }}"
     - name: Display all variables/facts known for a host
       debug:
         var: hostvars[inventory_hostname]
@@ -29,7 +29,7 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
 
-    - debug: msg="{{ ansible_pkg_mgr }}"
+    - debug: msg="{{ ansible_facts.pkg_mgr }}"
     - name: Display all variables/facts known for a host
       debug:
         var: hostvars[inventory_hostname]
@@ -52,10 +52,6 @@
     - role: viasite-ansible.zsh
       when: configure_zsh
       tags: ['zsh']
-##      put it in pre_tasks for set_fact?
-#      vars:
-#        ansible_pkg_mgr: "homebrew"
-#        when: ansible_facts['ansible_pkg_mgr'] == "unknown"
 
 
 

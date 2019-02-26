@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/GlaIZier/mac-dev-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/mac-dev-environment)
 // Fixme.
 // todo test
+// todo add info about this https://github.com/viasite-ansible/ansible-role-zsh/issues/18
+// todo describe how to use it partially without all the steps
 Ansible work environment initializer for a MacOs environment
 
 1. // add .bash_aliases, ... (add links from home to this repo) (config.yml)
