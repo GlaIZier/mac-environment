@@ -14,25 +14,25 @@
     - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
       set_fact:
         ansible_facts:
-              pkg_mgr: homebrew
+          pkg_mgr: homebrew
       when: ansible_facts['pkg_mgr'] == 'unknown'
 
-     - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
-          set_fact:
-            ansible_facts:
-                  pkg_mgr: homebrew
+    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
+      set_fact:
+        ansible_facts:
+          pkg_mgr: homebrew
       when: ansible_facts.pkg_mgr == 'unknown'
 
-     - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
-          set_fact:
-            ansible_facts:
-                  pkg_mgr: homebrew
+    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
+      set_fact:
+        ansible_facts:
+          pkg_mgr: homebrew
       when: ansible_facts['pkg_mgr'] is undefined
 
-     - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
-          set_fact:
-            ansible_facts:
-                  pkg_mgr: homebrew
+    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
+      set_fact:
+        ansible_facts:
+          pkg_mgr: homebrew
       when: ansible_facts.pkg_mgr is undefined
 
     - debug: msg="{{ ansible_facts.pkg_mgr }}"
