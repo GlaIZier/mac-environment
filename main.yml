@@ -15,7 +15,7 @@
       set_fact:
         ansible_facts:
               pkg_mgr: homebrew
-      when: ansible_facts['os_family'] is undefined
+      when: ansible_facts['pkg_mgr'] is undefined
 
     - debug: msg="{{ ansible_facts.pkg_mgr }}"
     - name: Display all variables/facts known for a host
