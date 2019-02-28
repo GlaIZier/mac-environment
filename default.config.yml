@@ -17,6 +17,7 @@ dotfiles_files:
   - macos/.bashrc
   - macos/.profile
   - macos/.zprofile
+  - macos/.zshrc
   - general/.gitignore
   - general/.gitconfig
 dotfiles_home: "~"

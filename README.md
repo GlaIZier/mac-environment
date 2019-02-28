@@ -19,9 +19,9 @@ Ansible work environment initializer for a MacOs environment
 https://github.com/fourforbusiness/ansible-role-oh-my-zsh/blob/master/templates/zshrc.j2
 https://github.com/veggiemonk/ansible-ohmyzsh
 https://github.com/viasite-ansible/ansible-role-zsh
-11. add config for ssh
+11. // add config for ssh
 13. // create a separate repo for configs and dotfiles
-12. add the sdk_man variable to zsh and bash profiles?
+12. add the sdk_man variable to zsh and bash profiles. After tests
 ## Installation
 
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
