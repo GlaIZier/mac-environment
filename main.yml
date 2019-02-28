@@ -21,12 +21,6 @@
       set_fact:
         ansible_facts:
           pkg_mgr: homebrew
-      when: ansible_facts.pkg_mgr == 'unknown'
-
-    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
-      set_fact:
-        ansible_facts:
-          pkg_mgr: homebrew
       when: ansible_facts['pkg_mgr'] is undefined
 
     - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
@@ -34,6 +28,12 @@
         ansible_facts:
           pkg_mgr: homebrew
       when: ansible_facts.pkg_mgr is undefined
+
+    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
+      set_fact:
+        ansible_facts:
+          pkg_mgr: homebrew
+      when: ansible_facts.pkg_mgr == 'unknown'
 
     - debug: msg="{{ ansible_facts.pkg_mgr }}"
     - name: Display all variables/facts known for a host
@@ -85,7 +85,7 @@
       tags: ['ssh']
 
     - include_tasks: tasks/zsh.yml
-      when: (configure_zsh && configure_dotfiles)
+      when: (configure_zsh and configure_dotfiles)
       tags: ['zsh', 'dotfiles']
 
     - include_tasks: tasks/extra-packages.yml
