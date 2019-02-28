@@ -5,13 +5,7 @@
     - default.config.yml
 
   pre_tasks:
-    - debug: msg="{{ ansible_facts.pkg_mgr }}"
-
-    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
-      set_fact:
-        ansible_facts:
-          pkg_mgr: homebrew
-      when: ansible_facts.pkg_mgr is undefined
+    - debug: msg="ansible_facts.pkg_mgr = {{ ansible_facts.pkg_mgr }}"
 
     - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
       set_fact:
@@ -19,14 +13,7 @@
           pkg_mgr: homebrew
       when: ansible_facts['pkg_mgr'] == 'unknown'
 
-
-    - name: "Set ansible_pkg_mgr to homebrew when it's unknown"
-      set_fact:
-        ansible_facts:
-          pkg_mgr: homebrew
-      when: ansible_facts.pkg_mgr == 'unknown'
-
-    - debug: msg="{{ ansible_facts.pkg_mgr }}"
+    - debug: msg="ansible_facts.pkg_mgr = {{ ansible_facts.pkg_mgr }}"
 
     # update the default.config.yml variables with ones from config.yml if it exists
     - include_vars: "{{ item }}"
