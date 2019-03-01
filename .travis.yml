@@ -42,5 +42,14 @@ script:
   # Test the playbook.
   - "travis_wait 30 ansible-playbook main.yml"
 
+  - "cat ~/.profile"
+  - "cat ~/.bashrc"
+  - "cat ~/.bash_profile"
+  - "cat ~/.gitconfig"
+  - "cat ~/.gitignore"
+  - "cat ~/.zprofile"
+  - "cat ~/.zshrc"
+  - "cat ~/.zshrc.local"
+
   # Check configs (as links) exist
   - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ] && [ -L ~/.gitconfig ] && [ -L ~/.gitignore ] && [ -L ~/.zprofile ] && [ -L ~/.zshrc ] && [ -L ~/.zshrc.local ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}
