@@ -5,23 +5,3 @@
     dest: "{{ dotfiles_home }}/.zshrc.local"
     force: yes
     state: link
-
-#- name: Ensure .zshrc.local is a link.
-#  command: "ls -F {{ dotfiles_home }}/.zshrc.local"
-#  register: existing_dotfile_info
-#  failed_when: false
-#  check_mode: false
-#  changed_when: false
-#
-#- name: Remove existing dotfiles file if a replacement is being linked.
-#  file:
-#    path: "{{ dotfiles_home }}/.zshrc.local"
-#    state: absent
-#  when: "'@' not in item.1.stdout"
-#
-#- name: Link .zshrc as .zshrc.local into a home folder.
-#  file:
-#    src: "{{ dotfiles_repo_local_destination }}/.zshrc"
-#    dest: "{{ dotfiles_home }}/.zshrc.local"
-#    state: link
-#  become: false

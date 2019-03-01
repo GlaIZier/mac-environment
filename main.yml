@@ -21,11 +21,9 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
 
-    - debug: msg="{{ ansible_facts.pkg_mgr }}"
-    - name: Display all variables/facts known for a host
-      debug:
-        var: hostvars[inventory_hostname]
-        verbosity: 4
+    - include_tasks: tasks/dotfiles.yml
+      when: configure_dotfiles
+      tags: ['dotfiles']
 
   roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
@@ -49,10 +47,6 @@
 
   tasks:
     - include_tasks: tasks/ansible-check.yml
-
-    - include_tasks: tasks/dotfiles.yml
-      when: configure_dotfiles
-      tags: ['dotfiles']
 
     - include_tasks: tasks/ssh.yml
       when: configure_ssh
