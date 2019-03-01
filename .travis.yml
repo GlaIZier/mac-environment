@@ -53,14 +53,14 @@ script:
   - "cat ~/.zshrc.local"
 
   # Check configs (as links) exist
-  - ([ -L ~/.profile ]) && { echo '.profile is in the home directory'; exit 0;} || { echo '.profile is not in the home directory'; exit 1;}
-  - ([ -L ~/.bashrc ]) && { echo '.bashrc is in the home directory'; exit 0;} || { echo '.bashrc is not in the home directory'; exit 1;}
-  - ([ -L ~/.bash_profile ]) && { echo '.bash_profile is in the home directory'; exit 0;} || { echo '.bash_profile is not in the home directory'; exit 1;}
-  - ([ -L ~/.gitconfig ]) && { echo '.gitconfig is in the home directory'; exit 0;} || { echo '.gitconfig is not in the home directory'; exit 1;}
-  - ([ -L ~/.gitignore ]) && { echo '.gitignore is in the home directory'; exit 0;} || { echo '.gitignore is not in the home directory'; exit 1;}
-  - ([ -L ~/.zprofile ]) && { echo '.zprofile is in the home directory'; exit 0;} || { echo '.zprofile is not in the home directory'; exit 1;}
-  - ([ -e ~/.zshrc ]) && { echo '.zshrc is in the home directory'; exit 0;} || { echo '.zshrc is not in the home directory'; exit 1;}
-  - ([ -L ~/.zshrc.local ]) && { echo '.zshrc.local is in the home directory'; exit 0;} || { echo '.zshrc.local is not in the home directory'; exit 1;}
+  - ([ -L ~/.profile ]) && { echo '.profile is in the home directory';} || { echo '.profile is not in the home directory'; exit 1;}
+  - ([ -L ~/.bashrc ]) && { echo '.bashrc is in the home directory';} || { echo '.bashrc is not in the home directory'; exit 1;}
+  - ([ -L ~/.bash_profile ]) && { echo '.bash_profile is in the home directory';} || { echo '.bash_profile is not in the home directory'; exit 1;}
+  - ([ -L ~/.gitconfig ]) && { echo '.gitconfig is in the home directory';} || { echo '.gitconfig is not in the home directory'; exit 1;}
+  - ([ -L ~/.gitignore ]) && { echo '.gitignore is in the home directory';} || { echo '.gitignore is not in the home directory'; exit 1;}
+  - ([ -L ~/.zprofile ]) && { echo '.zprofile is in the home directory';} || { echo '.zprofile is not in the home directory'; exit 1;}
+  - ([ -e ~/.zshrc ]) && { echo '.zshrc is in the home directory';} || { echo '.zshrc is not in the home directory'; exit 1;}
+  - ([ -L ~/.zshrc.local ]) && { echo '.zshrc.local is in the home directory';} || { echo '.zshrc.local is not in the home directory'; exit 1;}
 
 #  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ] && [ -L ~/.gitconfig ] && [ -L ~/.gitignore ] && [ -L ~/.zprofile ] && [ -L ~/.zshrc ] && [ -L ~/.zshrc.local ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}
 
