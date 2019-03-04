@@ -67,6 +67,11 @@ script:
   # Test the playbook's idempotence.
   - idempotence=$(mktemp)
   - "ansible-playbook main.yml | tee -a ${idempotence}"
+  - "cd ~/github/configs | git status"
+  - "cd ~/github/configs | git diff"
+  - "ls -la ~/github/configs" 
+  - "ls -la ~/github/configs/macos" 
+  - "ls -la ~/github/configs/general" 
   - >
     tail ${idempotence}
     | grep -q 'changed=0.*failed=0'
