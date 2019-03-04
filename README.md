@@ -6,6 +6,13 @@
 // todo describe how to use it partially without all the steps
 Ansible work environment initializer for a MacOs environment
 
+## What does it do
+1. adds configs (dotfiles like .bashrc) from a github repository to your home directory '~'
+2. installs homebrew and homebrew apps ()
+3. installs mas and mas applications ()
+4. installs sdkman and sdk applications ()
+5. 
+
 1. // add .bash_aliases, ... (add links from home to this repo) (config.yml)
 2. // install homebrew, homebrew cask (), mas
 2. // install sdkman, java, maven, gradle
