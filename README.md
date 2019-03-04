@@ -2,16 +2,31 @@
 [![Build Status](https://travis-ci.org/GlaIZier/mac-dev-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/mac-dev-environment)
 // Fixme.
 // todo test
-// todo add info about this https://github.com/viasite-ansible/ansible-role-zsh/issues/18
 // todo describe how to use it partially without all the steps
 Ansible work environment initializer for a MacOs environment
 
 ## What does it do
 1. adds configs (dotfiles like .bashrc) from a github repository to your home directory '~'
-2. installs homebrew and homebrew apps ()
-3. installs mas and mas applications ()
-4. installs sdkman and sdk applications ()
-5. 
+2. installs homebrew and homebrew (git, wget...) along with cask (idea, chrome...) apps ([homebrew role](https://github.com/geerlingguy/ansible-role-homebrew))
+3. installs mas and mas applications ([mas role](https://github.com/geerlingguy/ansible-role-mas))
+4. installs sdkman and sdk applications ([sdkman role](https://github.com/Comcast/ansible-sdkman))
+5. installs zsh, oh-my-zsh and configures it ([oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh))
+6. creates a pair of ssh keys
+7. installs additional npm, python, ruby and php packages
+
+## Dependencies
+[homebrew role](https://github.com/geerlingguy/ansible-role-homebrew)
+[mas role](https://github.com/geerlingguy/ansible-role-mas)
+[sdkman role](https://github.com/Comcast/ansible-sdkman)\
+[oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh)
+
+## Issues
+1. For some reason after installing homebrew using the homebrew role, {{ ansible_pkg_mgr }} is unknown in ansible facts (see [this issue](https://github.com/geerlingguy/ansible-role-homebrew/issues/117) and [this issue](https://github.com/Comcast/ansible-sdkman/issues/42)). For a workaround, a manual explicit setup is used in pretasks section.
+2. For the oh-my-zsh role, it fails on the "Download fzf" step, which uses the unarchive module. This issue is described [here](https://github.com/viasite-ansible/ansible-role-zsh/issues/18) As a workaround fzf is installed by the homebrew role.
+3. This role is not idempotent?
+
+
+
 
 1. // add .bash_aliases, ... (add links from home to this repo) (config.yml)
 2. // install homebrew, homebrew cask (), mas
