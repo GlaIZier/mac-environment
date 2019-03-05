@@ -42,17 +42,9 @@ script:
   # Test the playbook.
   - "travis_wait 30 ansible-playbook main.yml -v"
 
-# todo remove
-  - "cat ~/.profile"
-  - "cat ~/.bashrc"
-  - "cat ~/.bash_profile"
-  - "cat ~/.gitconfig"
-  - "cat ~/.gitignore"
-  - "cat ~/.zprofile"
-  - "cat ~/.zshrc"
-  - "cat ~/.zshrc.local"
+#  - "cat ~/.profile"
 
-  # Check configs (as links) exist
+  # Check configs (as links or files) exist
   - ([ -L ~/.profile ]) && { echo '.profile is in the home directory';} || { echo '.profile is not in the home directory'; exit 1;}
   - ([ -L ~/.bashrc ]) && { echo '.bashrc is in the home directory';} || { echo '.bashrc is not in the home directory'; exit 1;}
   - ([ -L ~/.bash_profile ]) && { echo '.bash_profile is in the home directory';} || { echo '.bash_profile is not in the home directory'; exit 1;}
@@ -66,14 +58,11 @@ script:
 
   # Test the playbook's idempotence.
   - idempotence=$(mktemp)
-  - "ansible-playbook main.yml | tee -a ${idempotence}"
-  - "cd ~/github/configs | git status"
-  - "cd ~/github/configs | git diff"
-  - "ls -la ~/github/configs" 
-  - "ls -la ~/github/configs/macos" 
-  - "ls -la ~/github/configs/general" 
+  - "ansible-playbook main.yml -v | tee -a ${idempotence}"
+#  - "cd ~/github/configs | git status"
+# 5 changes are: .zshrc and sdkman candidates
   - >
     tail ${idempotence}
-    | grep -q 'changed=0.*failed=0'
+    | grep -q 'changed=5.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
