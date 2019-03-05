@@ -1,13 +1,10 @@
-# Ansible mac environment initializer for developers
-[![Build Status](https://travis-ci.org/GlaIZier/mac-dev-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/mac-dev-environment)
-// Fixme.
+# Ansible MacOS environment initializer for developers
+[![Build Status](https://travis-ci.org/GlaIZier/macos-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/macos-environment)
 // todo test
-// todo fix idempotence
-Ansible work environment initializer for a MacOs environment
 
 ## What does it do
 1. adds configs (dotfiles like .bashrc) from a github repository to your home directory '~'
-2. installs homebrew and homebrew (git, wget... check the full list in the config) along with cask (idea, chrome... check the full list in the config) apps ([homebrew role](https://github.com/geerlingguy/ansible-role-homebrew))
+2. installs homebrew and homebrew (git, wget, python... check the full list in the config) along with cask (idea, chrome... check the full list in the config) apps ([homebrew role](https://github.com/geerlingguy/ansible-role-homebrew))
 3. installs mas and mas applications ([mas role](https://github.com/geerlingguy/ansible-role-mas))
 4. installs sdkman and sdk applications ([sdkman role](https://github.com/Comcast/ansible-sdkman))
 5. installs zsh, oh-my-zsh and configures it ([oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh))
@@ -76,21 +73,9 @@ You can override any of the defaults configured in `default.config.yml` by creat
 
 Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables.
 
-## Inspired by [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) 
+## Idempotence
+This playbook has two inidempotent steps:
+1. .zshrc can be replaced by the dotfiles task and then by the .oh-my-zsh role if you run the whole playbook repeatedly. This is done to make this playbook work with with an arbitrary number of included tasks. 
+2. The sdkman role changes candidates every time (maybe because the version is not specified?)
 
-1. // add .bash_aliases, ... (add links from home to this repo) (config.yml)
-2. // install homebrew, homebrew cask (), mas
-2. // install sdkman, java, maven, gradle
-3. // download chrome, idea, sublime, skype, google-backup-and-sync, docker, iTerm2, telegram?
-4. // git and git settings (git config, gitignore)?
-5. // generate .ssh keys for github?
-6. // install python and additional python dependencies
-8. // add an overridable config
-9. // install extra_packages
-10. install zsh .zshrc?
-https://github.com/fourforbusiness/ansible-role-oh-my-zsh/blob/master/templates/zshrc.j2
-https://github.com/veggiemonk/ansible-ohmyzsh
-https://github.com/viasite-ansible/ansible-role-zsh
-11. // add config for ssh
-13. // create a separate repo for configs and dotfiles
-12. add the sdk_man variable to zsh and bash profiles. After tests
+## Inspired by [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) 
