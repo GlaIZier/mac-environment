@@ -54,6 +54,10 @@ script:
   - ([ -e ~/.zshrc ]) && { echo '.zshrc is in the home directory';} || { echo '.zshrc is not in the home directory'; exit 1;}
   - ([ -L ~/.zshrc.local ]) && { echo '.zshrc.local is in the home directory';} || { echo '.zshrc.local is not in the home directory'; exit 1;}
 
+  - ([ -d ~/app ]) && { echo 'app folder is in the home directory';} || { echo 'app folder is not in the home directory'; exit 1;}
+  - ([ -d ~/github ]) && { echo 'github folder is in the home directory';} || { echo 'github folder is not in the home directory'; exit 1;}
+  - ([ -d ~/tmp ]) && { echo 'tmp folder is in the home directory';} || { echo 'tmp folder is not in the home directory'; exit 1;}
+
 #  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ] && [ -L ~/.gitconfig ] && [ -L ~/.gitignore ] && [ -L ~/.zprofile ] && [ -L ~/.zshrc ] && [ -L ~/.zshrc.local ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}
 
   # Test the playbook's idempotence.

@@ -9,6 +9,7 @@ configure_zsh: yes
 configure_ssh: yes
 configure_mas: yes
 configure_extra_packages: yes
+configure_folders: yes
 
 dotfiles_repo: "https://github.com/GlaIZier/configs"
 dotfiles_repo_version: master
@@ -78,6 +79,11 @@ pip_packages: []
   #   version: "0.16.3" # default: N/A
 
 zsh_autosuggestions_bind_key: "^U"
+
+folders:
+  - ~/app
+  - ~/github
+  - ~/tmp
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
