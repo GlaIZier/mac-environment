@@ -64,9 +64,9 @@ script:
   - idempotence=$(mktemp)
   - "ansible-playbook main.yml -v | tee -a ${idempotence}"
 #  - "cd ~/github/configs | git status"
-# 5 changes are: .zshrc and sdkman candidates
+# 6 changes are: .zshrc and sdkman candidates
   - >
     tail ${idempotence}
-    | grep -q 'changed=5.*failed=0'
+    | grep -q 'changed=6.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
