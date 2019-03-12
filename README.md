@@ -1,6 +1,5 @@
 # Ansible MacOS environment initializer for developers
 [![Build Status](https://travis-ci.org/GlaIZier/macos-environment.svg?branch=master)](https://travis-ci.org/GlaIZier/macos-environment)
-// todo test
 
 ## What does it do
 1. adds configs (dotfiles like .bashrc) from a github repository to your home directory '~'
@@ -10,13 +9,14 @@
 5. installs zsh, oh-my-zsh and configures it ([oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh))
 6. creates a pair of ssh keys
 7. installs additional npm, python, ruby and php packages
+8. creates folders in the home directory
 
 ## Dependencies
 [homebrew role](https://github.com/geerlingguy/ansible-role-homebrew)\
 [mas role](https://github.com/geerlingguy/ansible-role-mas)\
 [sdkman role](https://github.com/Comcast/ansible-sdkman)\
 [oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh) \
-In order to install configs in a home directory, a repository with them is required. My [repository](https://github.com/GlaIZier/configs) is used by default
+In order to install configs in the home directory, a repository with them is required. My [repository](https://github.com/GlaIZier/configs) is used by default
 
 ## Issues
 1. For some reason after installing homebrew using the homebrew role, {{ ansible_pkg_mgr }} is unknown in ansible facts (see [this issue](https://github.com/geerlingguy/ansible-role-homebrew/issues/117) and [this issue](https://github.com/Comcast/ansible-sdkman/issues/42)). For a workaround, a manual explicit setup is used in pretasks section. Useful links:
