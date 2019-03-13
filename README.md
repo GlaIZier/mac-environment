@@ -19,12 +19,13 @@
 In order to install configs in the home directory, a repository with them is required. My [repository](https://github.com/GlaIZier/configs) is used by default
 
 ## Issues
-1. For some reason after installing homebrew using the homebrew role, {{ ansible_pkg_mgr }} is unknown in ansible facts (see [this issue](https://github.com/geerlingguy/ansible-role-homebrew/issues/117) and [this issue](https://github.com/Comcast/ansible-sdkman/issues/42)). For a workaround, a manual explicit setup is used in pretasks section. Useful links:
+1. For some reason after installing homebrew using the homebrew role, {{ ansible_pkg_mgr }} is unknown in ansible facts (see [this issue](https://github.com/geerlingguy/ansible-role-homebrew/issues/117) and [this issue](https://github.com/Comcast/ansible-sdkman/issues/42)). For a workaround, a manual explicit setup is used in pre_tasks section. Useful links:
 https://stackoverflow.com/questions/29305335/how-can-i-persist-an-ansible-variable-across-ansible-roles \
 https://everythingshouldbevirtual.com/automation/ansible-using-set_facts-module/ \
-https://stackoverflow.com/questions/30763709/ansible-playbook-execute-in-this-order-task-role-task-role-task \
+https://stackoverflow.com/questions/30763709/ansible-playbook-execute-in-this-order-task-role-task-role-task 
 2. For the oh-my-zsh role, it fails on the "Download fzf" step, which uses the unarchive module. This issue is described [here](https://github.com/viasite-ansible/ansible-role-zsh/issues/18) As a workaround fzf is installed by the homebrew role.
-3. This role is not idempotent?
+3. This role is not fully idempotent. This forcefully re-installs dotfiles, configs and also sdkman packages if their vesions are not specified. 
+4. For Russia. If https://get.sdkman.io/ is unreachable, make sure you use proxy by, say, `export {http,https}_proxy="<server>"`. To unset `unset {http,https}_proxy` or reload the machine.
 
 ## Installation
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
@@ -35,9 +36,10 @@ Note: If some Homebrew commands fail, you might need to agree to Xcode's license
 
 ## Run
 ### Run all tasks
-`ansible-playbook main.yml -i inventory -K` inside this directory. Enter your account password when prompted. \
+`ansible-playbook main.yml -i inventory -K` inside this directory. Enter your account password when prompted. 
 ### Run separate tasks
-Filter by tags can be used: `ansible-playbook main.yml -i inventory -K --tags "dotfiles,homebrew"` \
+Filter by tags can be used: `ansible-playbook main.yml -i inventory -K --tags "dotfiles,homebrew"` or \
+`ansible-playbook main.yml -i inventory -K --tags "dotfiles,homebrew"` \
 Or update the config to disable some tasks, e.g. `configure_homebrew: no` \
 By using these strategies you can execute tasks one by one.
 
