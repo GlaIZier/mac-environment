@@ -46,15 +46,16 @@ homebrew_cask_apps:
   - intellij-idea
   - docker
   - keepassxc
-#  - betterzip
-#  - commander-one
-#  - double-commander
+  - betterzip
+  - commander-one
+#  - karabiner-elements
 #  - punto-switcher
 #  - microsoft-office
 #  - microsoft-teams
 #  - skype-for-business
 #  - nomachine
 #  - teamviewer
+#  - double-commander
 
 
 # See the role https://github.com/geerlingguy/ansible-role-mas
@@ -90,6 +91,8 @@ pip_packages: []
   #   version: "0.16.3" # default: N/A
 
 zsh_autosuggestions_bind_key: "^U"
+
+ssh_key_name: github_rsa
 
 folders:
   - ~/app

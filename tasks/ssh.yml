@@ -5,9 +5,9 @@
     state: directory
 
 - name: Ensure that ssh rsa key is in the ~/.ssh/
-  command : "ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/key -C 'GlaIZier' -N ''"
+  command : "ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/{{ ssh_key_name }} -C 'GlaIZier' -N ''"
   args:
-    creates: "~/.ssh/github_rsa"
+    creates: "~/.ssh/{{ ssh_key_name }}"
 
 - name: Ensure the ssh config is copied
   copy:
