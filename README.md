@@ -43,6 +43,14 @@ Filter by tags can be used: `ansible-playbook main.yml -i inventory -K --tags "d
 Or update the config to disable some tasks, e.g. `configure_homebrew: no` \
 By using these strategies you can execute tasks one by one.
 
+## Additional setup
+1. Choose fonts for powerline for iTerm2. \
+ iTerm2-Preferences-Profiles-Text-Font-Droid Sans Mono for Powerline. \
+ More info in Readme for the zsh role
+2. Install color scheme for iTerm2 \
+iTerm2-Preferences-Profiles-Colors-Color Presets-Solarized Dark
+3. Install transparency and blur
+iTerm2-Preferences-Profiles-Window
 
 ## Config
 You can override any of the defaults configured in `default.config.yml` by creating a `config.yml` file and setting the overrides in that file. For example, you can customize the installed packages and apps with something like:
@@ -79,5 +87,8 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 This playbook has two inidempotent steps:
 1. .zshrc can be replaced by the dotfiles task and then by the .oh-my-zsh role if you run the whole playbook repeatedly. This is done to make this playbook work with with an arbitrary number of included tasks. 
 2. The sdkman role changes candidates every time (maybe because the version is not specified?)
+
+## More information
+More information can be found in readmes for every role
 
 ## Inspired by [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook) 
