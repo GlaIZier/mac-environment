@@ -25,7 +25,8 @@ https://everythingshouldbevirtual.com/automation/ansible-using-set_facts-module/
 https://stackoverflow.com/questions/30763709/ansible-playbook-execute-in-this-order-task-role-task-role-task 
 2. For the oh-my-zsh role, it fails on the "Download fzf" step, which uses the unarchive module. This issue is described [here](https://github.com/viasite-ansible/ansible-role-zsh/issues/18) As a workaround fzf is installed by the homebrew role.
 3. This role is not fully idempotent. This forcefully re-installs dotfiles, configs and also sdkman packages if their vesions are not specified. 
-4. For Russia. If https://get.sdkman.io/ is unreachable, make sure you use proxy by, say, `export {http,https}_proxy="<server>"`. To unset `unset {http,https}_proxy` or reload the machine.
+4. For Russia. If https://get.sdkman.io/ is unreachable, make sure you use proxy by, say, `export {http,https}_proxy="<server>"`. To unset `unset {http,https}_proxy` or reload the machine. 
+5. Sometimes even with proxy enabled sdkman does not want to download packages (progress bar is not showing at all and the error about curl or a missing package occurs. No idea why this happens. Maybe switching from offline and online mode could help.
 
 ## Installation
   1. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
