@@ -48,6 +48,7 @@ homebrew_cask_apps:
   - keepassxc
   - betterzip
   - commander-one
+  - spectacle
 #  - karabiner-elements
 #  - punto-switcher
 #  - microsoft-office
