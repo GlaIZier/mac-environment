@@ -49,14 +49,18 @@ homebrew_cask_apps:
   - betterzip
   - commander-one
   - spectacle
-#  - karabiner-elements
+  - alfred
+#  - karabiner-elements # map keyboard keys including fn
 #  - punto-switcher
+#  - atom
+#  - brackets
+#  - nimble-commander
+#  - double-commander
 #  - microsoft-office
 #  - microsoft-teams
 #  - skype-for-business
 #  - nomachine
 #  - teamviewer
-#  - double-commander
 
 
 # See the role https://github.com/geerlingguy/ansible-role-mas
