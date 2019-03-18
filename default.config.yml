@@ -49,6 +49,8 @@ homebrew_cask_apps:
   - betterzip
   - commander-one
   - spectacle
+  - yujitach-menumeters
+  - clipy
   - alfred
 #  - karabiner-elements # map keyboard keys including fn
 #  - punto-switcher
