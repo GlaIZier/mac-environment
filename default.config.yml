@@ -48,12 +48,14 @@ homebrew_cask_apps:
   - keepassxc
   - betterzip
   - commander-one
-  - spectacle
-  - yujitach-menumeters
+  - spectacle # windows management
+  - yujitach-menumeters # system info in status menu
   - clipy
-  - alfred
+  - itsycal # calendar in status menu
 #  - karabiner-elements # map keyboard keys including fn
+#  - alfred # spotlight replacement
 #  - punto-switcher
+#  - insomnia # rest client
 #  - atom
 #  - brackets
 #  - nimble-commander
