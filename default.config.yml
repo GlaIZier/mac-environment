@@ -47,24 +47,25 @@ homebrew_cask_apps:
   - docker
   - keepassxc
   - betterzip
-  - commander-one
   - spectacle # windows management
   - yujitach-menumeters # system info in status menu
-  - clipy
+  - clipy # clipboard manager
   - itsycal # calendar in status menu
+  - punto-switcher
+#  - commander-one
 #  - karabiner-elements # map keyboard keys including fn
 #  - alfred # spotlight replacement
 #  - punto-switcher
 #  - insomnia # rest client
 #  - atom
 #  - brackets
-#  - nimble-commander
-#  - double-commander
 #  - microsoft-office
 #  - microsoft-teams
 #  - skype-for-business
 #  - nomachine
 #  - teamviewer
+#  - nimble-commander
+#  - double-commander
 
 
 # See the role https://github.com/geerlingguy/ansible-role-mas
