@@ -44,7 +44,6 @@ homebrew_cask_apps:
   - skype
   - iterm2
   - intellij-idea
-  - docker
   - keepassxc
   - betterzip
   - spectacle # windows management
@@ -52,10 +51,10 @@ homebrew_cask_apps:
   - clipy # clipboard manager
   - itsycal # calendar in status menu
   - punto-switcher
-#  - commander-one
 #  - karabiner-elements # map keyboard keys including fn
+#  - docker
+#  - commander-one
 #  - alfred # spotlight replacement
-#  - punto-switcher
 #  - insomnia # rest client
 #  - atom
 #  - brackets
@@ -76,7 +75,8 @@ mas_password: ""
 # see the sdkman role https://github.com/Comcast/ansible-sdkman
 sdkman_install_packages:
         - { candidate: java, version: '' }
-        - { candidate: java, version: '8.0.201-oracle' }
+#        - { candidate: java, version: '11.0.2-open' }
+#        - { candidate: java, version: '8.0.201-oracle' }
         - { candidate: gradle, version: '' }
         - { candidate: maven, version: '' }
 
