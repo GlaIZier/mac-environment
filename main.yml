@@ -21,8 +21,12 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
 
-    - include_tasks: tasks/dotfiles.yml
-      when: configure_dotfiles
+    - include_tasks: tasks/dotfiles-copy.yml
+      when: (configure_dotfiles and configure_dotfiles_copy)
+      tags: ['dotfiles']
+
+    - include_tasks: tasks/dotfiles-link.yml
+      when: (configure_dotfiles and not configure_dotfiles_copy)
       tags: ['dotfiles']
 
   roles:
