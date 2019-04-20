@@ -68,9 +68,19 @@ script:
   - idempotence=$(mktemp)
   - "ansible-playbook main.yml -v | tee -a ${idempotence}"
 #  - "cd ~/github/configs | git status"
-# 6 changes are: .zshrc and sdkman candidates
+# 4 changes are: some configs updated by sdkman role and sdkman candidates
   - >
     tail ${idempotence}
-    | grep -q 'changed=6.*failed=0'
+    | grep -q 'changed=4.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
+
+  - "cat ~/.profile"
+  - "cat ~/.bash_profile"
+  - "cat ~/.bashrc"
+  - "cat ~/.zshrc"
+  - "cat ~/.zshrc.local"
+  - "cat ~/.zprofile"
+  - "cat ~/.gitconfig"
+  - "cat ~/.gitignore"
+
