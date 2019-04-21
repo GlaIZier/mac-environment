@@ -61,6 +61,14 @@ script:
   - ([ -d ~/github ]) && { echo 'github folder is in the home directory';} || { echo 'github folder is not in the home directory'; exit 1;}
   - ([ -d ~/tmp ]) && { echo 'tmp folder is in the home directory';} || { echo 'tmp folder is not in the home directory'; exit 1;}
   - cat ~/.ssh/config
+  - "cat ~/.profile"
+  - "cat ~/.bash_profile"
+  - "cat ~/.bashrc"
+  - "cat ~/.zshrc"
+  - "cat ~/.zshrc.local"
+  - "cat ~/.zprofile"
+  - "cat ~/.gitconfig"
+  - "cat ~/.gitignore"
 
 #  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ] && [ -L ~/.gitconfig ] && [ -L ~/.gitignore ] && [ -L ~/.zprofile ] && [ -L ~/.zshrc ] && [ -L ~/.zshrc.local ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}
 
