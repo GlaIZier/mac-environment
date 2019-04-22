@@ -32,7 +32,7 @@
     - debug: msg="the value of ~/.zshrc is {{lookup('file', '~/.zshrc') }}"
     - debug: msg="the value of ~/.zprofile is {{lookup('file', '~/.zprofile') }}"
 
-    roles:
+  roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
     - role: geerlingguy.homebrew
       when: configure_homebrew
