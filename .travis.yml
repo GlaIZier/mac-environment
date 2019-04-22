@@ -64,7 +64,6 @@ script:
   - "cat ~/.zshrc"
   - "cat ~/.zprofile"
   - "cat ~/.zshrc.local"
-  - "(cd ~/github/configs && git diff >> ~/gd.txt) | cat ~/gd.txt"
 
 #  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ] && [ -L ~/.gitconfig ] && [ -L ~/.gitignore ] && [ -L ~/.zprofile ] && [ -L ~/.zshrc ] && [ -L ~/.zshrc.local ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}
 
@@ -85,4 +84,3 @@ script:
   - "cat ~/.zshrc"
   - "cat ~/.zprofile"
   - "cat ~/.zshrc.local"
-  - "(cd ~/github/configs && git diff >> ~/gd.txt) | cat ~/gd.txt"

@@ -25,23 +25,23 @@
       when: configure_dotfiles
       tags: ['dotfiles']
 
-  roles:
-    # https://github.com/geerlingguy/ansible-role-homebrew
-    - role: geerlingguy.homebrew
-      when: configure_homebrew
-      tags: ['homebrew']
-    # https://github.com/geerlingguy/ansible-role-mas
-    - role: geerlingguy.mas
-      when: (configure_mas and mas_installed_apps)
-      tags: ['mas']
-    # https://github.com/Comcast/ansible-sdkman
-    - role: comcast.sdkman
-      when: configure_sdkman
-      tags: ['sdkman']
-    # https://github.com/viasite-ansible/ansible-role-zsh
-    - role: viasite-ansible.zsh
-      when: configure_zsh
-      tags: ['zsh']
+#  roles:
+#    # https://github.com/geerlingguy/ansible-role-homebrew
+#    - role: geerlingguy.homebrew
+#      when: configure_homebrew
+#      tags: ['homebrew']
+#    # https://github.com/geerlingguy/ansible-role-mas
+#    - role: geerlingguy.mas
+#      when: (configure_mas and mas_installed_apps)
+#      tags: ['mas']
+#    # https://github.com/Comcast/ansible-sdkman
+#    - role: comcast.sdkman
+#      when: configure_sdkman
+#      tags: ['sdkman']
+#    # https://github.com/viasite-ansible/ansible-role-zsh
+#    - role: viasite-ansible.zsh
+#      when: configure_zsh
+#      tags: ['zsh']
 
 
 
