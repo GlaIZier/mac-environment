@@ -29,6 +29,8 @@
       when: (configure_dotfiles and not configure_dotfiles_copy)
       tags: ['dotfiles']
 
+    - debug: msg="the value of .bash_profile is {{lookup('file', '~/.bash_profile') }}"
+
   roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
     - role: geerlingguy.homebrew
@@ -38,7 +40,6 @@
     - role: geerlingguy.mas
       when: (configure_mas and mas_installed_apps)
       tags: ['mas']
-    - debug: msg="the value of .bash_profile is {{lookup('file', '~/.bash_profile') }}"
     # https://github.com/Comcast/ansible-sdkman
     - role: comcast.sdkman
       when: configure_sdkman
@@ -51,6 +52,8 @@
 
 
   tasks:
+    - debug: msg="the value of .bash_profile is {{lookup('file', '~/.bash_profile') }}"
+
     - include_tasks: tasks/ansible-check.yml
 
     - include_tasks: tasks/ssh.yml
