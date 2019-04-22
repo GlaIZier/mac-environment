@@ -45,12 +45,13 @@ Or update the config to disable some tasks, e.g. `configure_homebrew: no` \
 By using these strategies you can execute tasks one by one.
 
 ## Additional setup
-1. Download [powerline](https://github.com/powerline/fonts) fonts \ 
+1. If you install sdkman, check that profiles contain SDKMAN_DIR
+2. Download [powerline](https://github.com/powerline/fonts) fonts \ 
    Choose fonts for powerline for iTerm2 (e.g. Droid Sans Mono for Powerline or another one): iTerm2-Preferences-Profiles-Text-Font \
    More info in Readme of the [oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh)
-2. Install color scheme for iTerm2 \
+3. Install color scheme for iTerm2 \
 iTerm2-Preferences-Profiles-Colors-Color Presets-Solarized Dark
-3. Install transparency and blur
+4. Install transparency and blur
 iTerm2-Preferences-Profiles-Window
 
 ## Config

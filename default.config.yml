@@ -13,7 +13,7 @@ configure_folders: yes
 
 dotfiles_repo: "https://github.com/GlaIZier/configs"
 dotfiles_repo_version: master
-dotfiles_repo_local_destination: "~/github/configs"
+dotfiles_repo_local_destination: "~/github/configs-macos-environment"
 dotfiles_repo_accept_hostkey: false
 dotfiles_files:
   - macos/.bash_profile
@@ -45,7 +45,7 @@ homebrew_cask_apps:
   - iterm2
   - intellij-idea
   - keepassxc
-  - betterzip
+  - keka
   - spectacle # windows management
   - yujitach-menumeters # system info in status menu
   - clipy # clipboard manager
