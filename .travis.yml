@@ -51,7 +51,8 @@ script:
   - "cat ~/.bashrc"
   - "cat ~/.zshrc"
   - "cat ~/.zprofile"
-#  - "cat ~/.zshrc.local"
+  - "cat ~/.zshrc.local"
+
   - ([ -L ~/.profile ]) && { echo '.profile is in the home directory';} || { echo '.profile is not in the home directory'; exit 1;}
   - ([ -L ~/.bashrc ]) && { echo '.bashrc is in the home directory';} || { echo '.bashrc is not in the home directory'; exit 1;}
   - ([ -L ~/.bash_profile ]) && { echo '.bash_profile is in the home directory';} || { echo '.bash_profile is not in the home directory'; exit 1;}
@@ -59,7 +60,7 @@ script:
   - ([ -L ~/.gitignore ]) && { echo '.gitignore is in the home directory';} || { echo '.gitignore is not in the home directory'; exit 1;}
   - ([ -L ~/.zprofile ]) && { echo '.zprofile is in the home directory';} || { echo '.zprofile is not in the home directory'; exit 1;}
   - ([ -e ~/.zshrc ]) && { echo '.zshrc is in the home directory';} || { echo '.zshrc is not in the home directory'; exit 1;}
-#  - ([ -L ~/.zshrc.local ]) && { echo '.zshrc.local is in the home directory';} || { echo '.zshrc.local is not in the home directory'; exit 1;}
+  - ([ -L ~/.zshrc.local ]) && { echo '.zshrc.local is in the home directory';} || { echo '.zshrc.local is not in the home directory'; exit 1;}
 
   - ([ -d ~/app ]) && { echo 'app folder is in the home directory';} || { echo 'app folder is not in the home directory'; exit 1;}
   - ([ -d ~/github ]) && { echo 'github folder is in the home directory';} || { echo 'github folder is not in the home directory'; exit 1;}
