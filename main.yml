@@ -21,15 +21,9 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
 
-    - include_tasks: tasks/dotfiles-copy.yml
-      when: (configure_dotfiles and configure_dotfiles_copy)
+    - include_tasks: tasks/dotfiles.yml
+      when: configure_dotfiles
       tags: ['dotfiles']
-
-    - include_tasks: tasks/dotfiles-link.yml
-      when: (configure_dotfiles and not configure_dotfiles_copy)
-      tags: ['dotfiles']
-
-    - debug: msg="the value of .bash_profile is {{lookup('file', '~/.bash_profile') }}"
 
   roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
@@ -52,8 +46,6 @@
 
 
   tasks:
-    - debug: msg="the value of .bash_profile is {{lookup('file', '~/.bash_profile') }}"
-
     - include_tasks: tasks/ansible-check.yml
 
     - include_tasks: tasks/ssh.yml

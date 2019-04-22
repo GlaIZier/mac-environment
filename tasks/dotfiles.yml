@@ -1,8 +1,6 @@
 ---
-# Link files from my configs repository.
-# Use when you do want local changes to be saved in the configs repo
 # Inspired by https://github.com/geerlingguy/ansible-role-dotfiles/blob/master/tasks/main.yml
-# Since I have a different folder structure in my configs repo, I cannot use this role above
+# Todo add a comment why a role cannot be used
 - name: Ensure dotfiles repository is cloned locally.
   git:
     repo: "{{ dotfiles_repo }}"
@@ -24,7 +22,7 @@
   file:
     path: "{{ dotfiles_home }}/{{ dotfiles_files[item.0] | basename }}"
     state: absent
-#  when: "'@' not in item.1.stdout"
+  when: "'@' not in item.1.stdout"
   with_indexed_items: "{{ existing_dotfile_info.results }}"
 
 - name: Link dotfiles into home folder.

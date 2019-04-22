@@ -12,7 +12,7 @@
 8. creates folders in the home directory
 
 ## Dependencies
-[homebrew role](https://github.com/geerlingguy/ansible-role-homebrew)\
+[homebrew role](https://github.comgc/geerlingguy/ansible-role-homebrew)\
 [mas role](https://github.com/geerlingguy/ansible-role-mas)\
 [sdkman role](https://github.com/Comcast/ansible-sdkman)\
 [oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh) \

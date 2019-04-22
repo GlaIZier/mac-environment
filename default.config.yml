@@ -4,8 +4,6 @@ downloads: "~/.tmp/ansible-downloads/"
 
 configure_homebrew: yes
 configure_dotfiles: yes
-# if no, dotfiles are placed as links (dotfiles-link task is used)
-configure_dotfiles_copy: no
 configure_sdkman: yes
 configure_zsh: yes
 configure_ssh: yes
