@@ -38,6 +38,7 @@
     - role: geerlingguy.mas
       when: (configure_mas and mas_installed_apps)
       tags: ['mas']
+    - debug: msg="the value of .bash_profile is {{lookup('file', '~/.bash_profile') }}"
     # https://github.com/Comcast/ansible-sdkman
     - role: comcast.sdkman
       when: configure_sdkman

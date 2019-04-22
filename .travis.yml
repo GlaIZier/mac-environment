@@ -74,7 +74,7 @@ script:
 
   # Test the playbook's idempotence.
   - idempotence=$(mktemp)
-  - "ansible-playbook main.yml -v | tee -a ${idempotence}"
+  - "ansible-playbook main.yml -vvvv | tee -a ${idempotence}"
 #  - "cd ~/github/configs | git status"
 # 4 changes are: some configs updated by sdkman role and sdkman candidates
   - >
