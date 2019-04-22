@@ -58,7 +58,12 @@ script:
   - ([ -d ~/github ]) && { echo 'github folder is in the home directory';} || { echo 'github folder is not in the home directory'; exit 1;}
   - ([ -d ~/tmp ]) && { echo 'tmp folder is in the home directory';} || { echo 'tmp folder is not in the home directory'; exit 1;}
   - cat ~/.ssh/config
-  - cd ~/github/configs | git diff >> ~/gd.txt | cat ~/gd.txt
+  - "cat ~/.profile"
+  - "cat ~/.bash_profile"
+  - "cat ~/.bashrc"
+  - "cat ~/.zshrc"
+  - "cat ~/.zprofile"
+  - "cat ~/.zshrc.local"
 
 #  - ([ -L ~/.profile ] && [ -L ~/.bashrc ] && [ -L ~/.bash_profile ] && [ -L ~/.gitconfig ] && [ -L ~/.gitignore ] && [ -L ~/.zprofile ] && [ -L ~/.zshrc ] && [ -L ~/.zshrc.local ]) && { echo 'Configs are in the home directory'; exit 0;} || { echo 'Configs are not in the home directory'; exit 1;}
 
@@ -72,3 +77,10 @@ script:
     | grep -q 'changed=6.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
+
+  - "cat ~/.profile"
+  - "cat ~/.bash_profile"
+  - "cat ~/.bashrc"
+  - "cat ~/.zshrc"
+  - "cat ~/.zprofile"
+  - "cat ~/.zshrc.local"
