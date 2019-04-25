@@ -25,13 +25,6 @@
       when: configure_dotfiles
       tags: ['dotfiles']
 
-    - debug: msg="the value of ~/github/configs-macos-environment/macos/.bashrc is {{lookup('file', '~/github/configs-macos-environment/macos/.bashrc') }}"
-    - debug: msg="the value of ~/.bashrc is {{lookup('file', '~/.bashrc') }}"
-    - debug: msg="the value of ~/.bash_profile is {{lookup('file', '~/.bash_profile') }}"
-    - debug: msg="the value of ~/.profile is {{lookup('file', '~/.profile') }}"
-    - debug: msg="the value of ~/.zshrc is {{lookup('file', '~/.zshrc') }}"
-    - debug: msg="the value of ~/.zprofile is {{lookup('file', '~/.zprofile') }}"
-
   roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
     - role: geerlingguy.homebrew
@@ -53,12 +46,6 @@
 
 
   tasks:
-    - debug: msg="the value of ~/github/configs-macos-environment/macos/.bashrc is {{lookup('file', '~/github/configs-macos-environment/macos/.bashrc') }}"
-    - debug: msg="the value of ~/.bashrc is {{lookup('file', '~/.bashrc') }}"
-    - debug: msg="the value of ~/.bash_profile is {{lookup('file', '~/.bash_profile') }}"
-    - debug: msg="the value of ~/.profile is {{lookup('file', '~/.profile') }}"
-    - debug: msg="the value of ~/.zshrc is {{lookup('file', '~/.zshrc') }}"
-    - debug: msg="the value of ~/.zprofile is {{lookup('file', '~/.zprofile') }}"
 
     - include_tasks: tasks/ansible-check.yml
 
@@ -84,7 +71,6 @@
         loop_var: outer_item
       with_fileglob: "{{ post_provision_tasks|default(omit) }}"
 
-    - debug: msg="the value of ~/github/configs-macos-environment/macos/.bashrc is {{lookup('file', '~/github/configs-macos-environment/macos/.bashrc') }}"
     - debug: msg="the value of ~/.bashrc is {{lookup('file', '~/.bashrc') }}"
     - debug: msg="the value of ~/.bash_profile is {{lookup('file', '~/.bash_profile') }}"
     - debug: msg="the value of ~/.profile is {{lookup('file', '~/.profile') }}"

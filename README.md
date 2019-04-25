@@ -45,7 +45,7 @@ Or update the config to disable some tasks, e.g. `configure_homebrew: no` \
 By using these strategies you can execute tasks one by one.
 
 ## Additional setup
-1. If you install sdkman, check that profiles contain SDKMAN_DIR
+1. If you install sdkman, make sure that profiles contain SDKMAN_DIR. Especially if you tried to run the playbook several times
 2. Download [powerline](https://github.com/powerline/fonts) fonts \ 
    Choose fonts for powerline for iTerm2 (e.g. Droid Sans Mono for Powerline or another one): iTerm2-Preferences-Profiles-Text-Font \
    More info in Readme of the [oh-my-zsh role](https://github.com/viasite-ansible/ansible-role-zsh)
@@ -86,9 +86,10 @@ You can override any of the defaults configured in `default.config.yml` by creat
 Any variable can be overridden in `config.yml`; see the supporting roles' documentation for a complete list of available variables.
 
 ## Idempotence
-This playbook has two inidempotent steps:
+This playbook has several inidempotent steps:
 1. .zshrc can be replaced by the dotfiles task and then by the .oh-my-zsh role if you run the whole playbook repeatedly. This is done to make this playbook work with with an arbitrary number of included tasks. 
 2. The sdkman role changes candidates every time (maybe because the version is not specified?)
+3. Sdkman role may fail to add SDKMAN_HOME in profiles when you run this playbook several times. If so, add it manually.
 
 ## More information
 More information can be found in readmes for every role
