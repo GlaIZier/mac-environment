@@ -2,7 +2,7 @@
 
 downloads: "~/.tmp/ansible-downloads/"
 
-configure_homebrew: yes
+configure_homebrew: no
 configure_dotfiles: yes
 configure_sdkman: yes
 configure_zsh: yes
