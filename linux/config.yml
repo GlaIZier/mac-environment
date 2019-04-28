@@ -7,7 +7,7 @@ configure_dotfiles: yes
 configure_sdkman: yes
 configure_zsh: yes
 configure_ssh: yes
-configure_mas: yes
+configure_mas: no
 configure_extra_packages: yes
 configure_folders: yes
 
