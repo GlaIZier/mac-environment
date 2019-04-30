@@ -33,8 +33,8 @@ homebrew_installed_packages:
   - openssl
   - wget
   - python
-  - zsh
-  - fzf # is used by viasite-ansible/ansible-role-zsh. Without it, there will be a problem with this role: cannot unzip
+
+
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -63,7 +63,7 @@ homebrew_cask_apps:
 #  - skype-for-business
 #  - nomachine
 #  - teamviewer
-#  - nimble-commander
+#  - nimble-command
 #  - double-commander
 
 
