@@ -32,7 +32,7 @@ homebrew_installed_packages:
   - git
   - openssl
   - wget
-  - python
+
 
 
 
