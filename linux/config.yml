@@ -31,7 +31,7 @@ homebrew_installed_packages:
   - bash-completion
   - git
   - openssl
-  - wget
+
 
 
 
