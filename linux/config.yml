@@ -29,7 +29,7 @@ dotfiles_home: "~"
 #see the homebrew role https://github.com/geerlingguy/ansible-role-homebrew
 homebrew_installed_packages:
   - bash-completion
-  - git
+
 
 
 
