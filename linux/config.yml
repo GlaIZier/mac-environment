@@ -30,7 +30,7 @@ dotfiles_home: "~"
 homebrew_installed_packages:
   - bash-completion
   - git
-  - openssl
+
 
 
 
