@@ -64,7 +64,7 @@ homebrew_cask_apps:
 #  - nomachine
 #  - teamviewer
 #  - nimble-command
-#  - double-commander
+
 
 
 # See the role https://github.com/geerlingguy/ansible-role-mas
