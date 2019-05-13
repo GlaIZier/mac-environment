@@ -51,21 +51,6 @@ homebrew_cask_apps:
   - clipy # clipboard manager
   - itsycal # calendar in status menu
   - punto-switcher
-#  - karabiner-elements # map keyboard keys including fn
-#  - docker
-#  - commander-one
-#  - alfred # spotlight replacement
-#  - insomnia # rest client
-#  - atom
-#  - brackets
-
-
-
-
-
-
-
-
 
 # See the role https://github.com/geerlingguy/ansible-role-mas
 mas_installed_apps: []
