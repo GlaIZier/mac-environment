@@ -45,13 +45,17 @@ homebrew_cask_apps:
   - iterm2
   - intellij-idea
   - keepassxc
-  - keka
+  - the-unarchiver
   - spectacle # windows management
   - yujitach-menumeters # system info in status menu
   - clipy # clipboard manager
   - itsycal # calendar in status menu
+  - karabiner-elements # map keyboard keys including fn
   - punto-switcher
-#  - karabiner-elements # map keyboard keys including fn
+  - plex-media-server
+  - android-file-transfer
+  - qbittorrent
+  - libreoffice
 #  - docker
 #  - commander-one
 #  - alfred # spotlight replacement
@@ -108,6 +112,7 @@ folders:
   - ~/app
   - ~/github
   - ~/tmp
+  - ~/cloud
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []

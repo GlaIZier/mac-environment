@@ -33,6 +33,8 @@ https://stackoverflow.com/questions/30763709/ansible-playbook-execute-in-this-or
   2. [Install Ansible](http://docs.ansible.com/intro_installation.html).
   3. Clone this repository to your local drive.
   4. Run `$ ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
+  5. Adjust packages to be installed in default.config.yml or create a custom config.yml and overwrite them according to your necessities
+  6. Enable proxy (see issues) if needed
 Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run brew doctor to see if this is the case.
 
 ## Run
