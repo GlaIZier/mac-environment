@@ -78,9 +78,11 @@ mas_password: ""
 
 # see the sdkman role https://github.com/Comcast/ansible-sdkman
 sdkman_install_packages:
-        - { candidate: java, version: '' }
+#        - { candidate: java, version: '' }
 #        - { candidate: java, version: '11.0.2-open' }
 #        - { candidate: java, version: '8.0.201-oracle' }
+        - { candidate: java, version: '8.0.212-amzn' }
+        - { candidate: java, version: '11.0.3.hs-adpt' }
         - { candidate: gradle, version: '' }
         - { candidate: maven, version: '' }
 
