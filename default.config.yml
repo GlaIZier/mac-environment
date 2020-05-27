@@ -32,16 +32,16 @@ homebrew_installed_packages:
   - git
   - openssl
   - wget
-  - python
   - zsh
+  - neovim
   - fzf # is used by viasite-ansible/ansible-role-zsh. Without it, there will be a problem with this role: cannot unzip
+  - python
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - google-chrome
   - google-backup-and-sync
   - sublime-text
-  - skype
   - iterm2
   - intellij-idea
   - keepassxc
@@ -50,26 +50,37 @@ homebrew_cask_apps:
   - yujitach-menumeters # system info in status menu
   - clipy # clipboard manager
   - itsycal # calendar in status menu
-  - karabiner-elements # map keyboard keys including fn
   - punto-switcher
-  - plex-media-server
-  - android-file-transfer
-  - libreoffice
-  - transmission
-#  - qbittorrent
-#  - docker
-#  - commander-one
-#  - alfred # spotlight replacement
-#  - insomnia # rest client
-#  - atom
-#  - brackets
-#  - microsoft-office
+  - numi # calc
+  - omnidisksweeper # large files management
+  - app-cleaner # application manager
+#  - karabiner-elements # map keyboard keys including fn
+#  - skype
+#  - telegram-desktop
 #  - microsoft-teams
 #  - skype-for-business
-#  - nomachine
-#  - teamviewer
-#  - nimble-commander
-#  - double-commander
+#  - android-file-transfer
+#  - libreoffice
+#  - microsoft-office
+#  - plex-media-server
+#  - transmission
+#  - qbittorrent
+#  - visual-studio-code
+#  - macvim
+#  - brackets
+#  - atom
+#  - docker
+#  - commander-one # file manager with two windows
+#  - gimp
+#  - spark # email client
+#  - alfred # spotlight replacement
+#  - insomnia # rest client
+#  - soda-player # player of torrent files
+#  - unite # website -> app
+#  - downie # download videos from sites
+#  - tunnelblick # vpn client
+#  - coconutbattery # battery checker for Apple devices
+
 
 
 # See the role https://github.com/geerlingguy/ansible-role-mas
