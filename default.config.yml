@@ -73,6 +73,7 @@ homebrew_cask_apps:
 #  - commander-one # file manager with two windows
 #  - gimp
 #  - spark # email client
+#  - vlc # media player
 #  - alfred # spotlight replacement
 #  - insomnia # rest client
 #  - soda-player # player of torrent files
