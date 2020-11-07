@@ -53,7 +53,7 @@ homebrew_cask_apps:
   - punto-switcher
   - numi # calc
   - omnidisksweeper # large files management
-  - app-cleaner # application manager
+  - appcleaner # application manager
 #  - karabiner-elements # map keyboard keys including fn
 #  - skype
 #  - telegram-desktop
