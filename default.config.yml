@@ -37,6 +37,7 @@ homebrew_installed_packages:
   - fzf # is used by viasite-ansible/ansible-role-zsh. Without it, there will be a problem with this role: cannot unzip
   - tmux
   # - python
+  # - pyenv
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
