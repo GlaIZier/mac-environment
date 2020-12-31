@@ -56,6 +56,7 @@ homebrew_cask_apps:
   - numi # calc
   - omnidisksweeper # large files management
   - appcleaner # application manager
+  - tunnelblick # vpn client
 #  - karabiner-elements # map keyboard keys including fn
 #  - skype
 #  - telegram-desktop
@@ -81,8 +82,8 @@ homebrew_cask_apps:
 #  - soda-player # player of torrent files
 #  - unite # website -> app
 #  - downie # download videos from sites
-#  - tunnelblick # vpn client
 #  - coconutbattery # battery checker for Apple devices
+#  - protonvpn # free vpn
 
 
 
