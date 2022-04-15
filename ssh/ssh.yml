@@ -1,0 +1,16 @@
+---
+- name: Ensures ~/.ssh/ directory exists
+  file:
+    path: "~/.ssh"
+    state: directory
+
+- name: Ensure that git ssh rsa key is in the ~/.ssh/
+  command : "ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/{{ ssh_git_key_name }} -C 'q0oz' -N ''"
+  args:
+    creates: "~/.ssh/{{ ssh_key_name }}"
+    
+- name: Ensure that github ssh rsa key is in the ~/.ssh/
+  command : "ssh-keygen -q -t rsa -b 4096 -f ~/.ssh/{{ ssh_github_key_name }} -C 'GlaIZier' -N ''"
+  args:
+    creates: "~/.ssh/{{ ssh_key_name }}"
+

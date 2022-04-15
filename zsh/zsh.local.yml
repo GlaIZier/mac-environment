@@ -1,0 +1,5 @@
+---
+- name: Copy .zsh as .zsh.local
+  copy:
+    src: "~/.zshrc"
+    dest: "~/.zshrc.local"

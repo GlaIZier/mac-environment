@@ -1,0 +1,70 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+#    mas_installed_app_ids:
+#      - 424389933 # Final Cut Pro
+#      - 497799835 # Xcode
+
+
+    homebrew_installed_packages:
+        - bash-completion
+        - git
+        - openssl
+        - wget
+        - zsh
+        - neovim
+        - fzf # is used by viasite-ansible/ansible-role-zsh. Without it, there will be a problem with this role: cannot unzip
+        - tmux
+        # - python
+        # - pyenv
+
+    homebrew_cask_apps:
+        - google-chrome
+        - google-drive
+        - sublime-text
+        - iterm2
+        - keepassxc
+        - the-unarchiver
+        - spectacle # windows management
+        - menumeters # system info in status menu
+        - clipy # clipboard manager
+        - itsycal # calendar in status menu
+        - numi # calc
+        - omnidisksweeper # large files management
+        - appcleaner # application manager
+        - tunnelblick # vpn client
+        #  - intellij-idea # check wether apple silicon is installed
+        #  - punto-switcher # not in brew anymore
+        #  - karabiner-elements # map keyboard keys including fn
+        #  - skype
+        #  - telegram-desktop
+        #  - microsoft-teams
+        #  - skype-for-business
+        #  - android-file-transfer
+        #  - libreoffice
+        #  - microsoft-office
+        #  - plex-media-server
+        #  - transmission
+        #  - qbittorrent
+        #  - visual-studio-code
+        #  - macvim
+        #  - brackets
+        #  - atom
+        #  - docker
+        #  - commander-one # file manager with two windows
+        #  - gimp
+        #  - spark # email client
+        #  - vlc # media player
+        #  - alfred # spotlight replacement
+        #  - insomnia # rest client
+        #  - soda-player # player of torrent files
+        #  - unite # website -> app
+        #  - downie # download videos from sites
+        #  - coconutbattery # battery checker for Apple devices
+        #  - protonvpn # free vpn
+
+  roles:
+    - geerlingguy.mac.homebrew
+#    - geerlingguy.mac.mas
