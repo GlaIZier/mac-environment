@@ -42,21 +42,21 @@ homebrew_installed_packages:
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - google-chrome
-  - google-backup-and-sync
+  - google-drive
   - sublime-text
   - iterm2
   - intellij-idea
   - keepassxc
   - the-unarchiver
   - spectacle # windows management
-  - yujitach-menumeters # system info in status menu
+  - menumeters # system info in status menu
   - clipy # clipboard manager
   - itsycal # calendar in status menu
-  - punto-switcher
   - numi # calc
   - omnidisksweeper # large files management
   - appcleaner # application manager
   - tunnelblick # vpn client
+#  - punto-switcher # is not in brew anymore
 #  - karabiner-elements # map keyboard keys including fn
 #  - skype
 #  - telegram-desktop

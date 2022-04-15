@@ -27,11 +27,11 @@
 
   roles:
     # https://github.com/geerlingguy/ansible-role-homebrew
-    - role: geerlingguy.homebrew
+    - role: geerlingguy.mac.homebrew
       when: configure_homebrew | bool
       tags: ['homebrew']
     # https://github.com/geerlingguy/ansible-role-mas
-    - role: geerlingguy.mas
+    - role: geerlingguy.mac.mas
       when: (configure_mas and mas_installed_apps) | bool
       tags: ['mas']
     # https://github.com/Comcast/ansible-sdkman
