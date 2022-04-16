@@ -14,10 +14,5 @@ DEADJOE
 
 rebel*.xml
 *.versionsBackup
-
-repository/
-target/
-logs/
-key-value-cache/
-.gradle/
-build/
+.venv
+venv
