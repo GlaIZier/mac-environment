@@ -9,3 +9,10 @@ Run `ansible-galaxy install -r requirements.yml` inside this directory to instal
 
 ## Run
 ansible-playbook -i "localhost," -c local -K zsh.yml
+
+## Install manually
+oh-my-zsh
+fzf
+zsh-autosuggestions
+Powerlevel10k theme
+
