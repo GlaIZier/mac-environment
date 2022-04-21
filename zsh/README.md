@@ -12,7 +12,6 @@ ansible-playbook -i "localhost," -c local -K zsh.yml
 
 ## Install manually
 oh-my-zsh
-fzf
+fzf with useful key bindings like ctrl+r
 zsh-autosuggestions
 Powerlevel10k theme
-
