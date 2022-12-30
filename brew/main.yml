@@ -17,6 +17,7 @@
         - neovim
         - fzf # is used by viasite-ansible/ansible-role-zsh. Without it, there will be a problem with this role: cannot unzip
         - tmux
+        # - w-calc
         # - python
         # - pyenv
 
