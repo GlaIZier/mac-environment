@@ -18,13 +18,14 @@
         - fzf # is used by viasite-ansible/ansible-role-zsh. Without it, there will be a problem with this role: cannot unzip
         - tmux
         # - w-calc
-        # - python
         # - pyenv
+        # - colima # docker vm
+        # - python
 
     homebrew_cask_apps:
         - google-chrome
         - google-drive
-        - sublime-text
+        - visual-studio-code
         - iterm2
         - keepassxc
         - the-unarchiver
@@ -38,36 +39,36 @@
         - tunnelblick # vpn client
         - aldente # limit battery charge
         # - rectangle # open source spectacle alternative
-        #  - intellij-idea # check wether apple silicon is installed
-        #  - punto-switcher # not in brew anymore
-        #  - karabiner-elements # map keyboard keys including fn
-        #  - skype
-        #  - telegram-desktop
-        #  - microsoft-teams
-        #  - skype-for-business
-        #  - android-file-transfer
-        #  - libreoffice
-        #  - microsoft-office
-	#  - onedrive
-        #  - plex-media-server
-        #  - transmission
-        #  - qbittorrent
-        #  - visual-studio-code
-        #  - macvim
-        #  - brackets
-        #  - atom
-        #  - docker
-        #  - commander-one # file manager with two windows
-        #  - gimp
-        #  - spark # email client
-        #  - vlc # media player
-        #  - alfred # spotlight replacement
-        #  - insomnia # rest client
-        #  - soda-player # player of torrent files
-        #  - unite # website -> app
-        #  - downie # download videos from sites
-        #  - coconutbattery # battery checker for Apple devices
-        #  - protonvpn # free vpn
+        # - intellij-idea # check wether apple silicon is installed
+        # - punto-switcher # not in brew anymore
+        # - karabiner-elements # map keyboard keys including fn
+        # - skype
+        # - telegram-desktop
+        # - microsoft-teams
+        # - skype-for-business
+        # - android-file-transfer
+        # - libreoffice
+        # - microsoft-office
+	      # - onedrive
+        # - plex-media-server
+        # - transmission
+        # - qbittorrent
+        # - sublime-text
+        # - macvim
+        # - brackets
+        # - atom
+        # - docker
+        # - commander-one # file manager with two windows
+        # - gimp
+        # - spark # email client
+        # - vlc # media player
+        # - alfred # spotlight replacement
+        # - insomnia # rest client
+        # - soda-player # player of torrent files
+        # - unite # website -> app
+        # - downie # download videos from sites
+        # - coconutbattery # battery checker for Apple devices
+        # - protonvpn # free vpn
 
   roles:
     - geerlingguy.mac.homebrew
