@@ -38,6 +38,9 @@
         - appcleaner # application manager
         - tunnelblick # vpn client
         - aldente # limit battery charge
+        # - docker
+        # - docker-buildx
+        # - docker-compose
         # - rectangle # open source spectacle alternative
         # - intellij-idea # check wether apple silicon is installed
         # - punto-switcher # not in brew anymore
